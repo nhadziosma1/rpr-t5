@@ -2,6 +2,51 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import java.net.URL?>
+
 <GridPane fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+           <columnConstraints>
+               <ColumnConstraints hgrow="ALWAYS"/>
+               <ColumnConstraints hgrow="ALWAYS"/>
+               <ColumnConstraints hgrow="ALWAYS"/>
+               <ColumnConstraints hgrow="ALWAYS"/>
+           </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+            </rowConstraints>
+
+            <stylesheets>
+                    <URL value ="@boja.css" />
+            </stylesheets>
+
+
+            <Label fx:id="display" GridPane.columnSpan="4" maxWidth="Infinity" maxHeight="Infinity" text="${controller.displej}" />
+            <Button fx:id="percenbtn" GridPane.rowIndex="1" maxWidth="Infinity" text="\%" onAction="#Ostatak"/>
+            <Button fx:id="devidebtn" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity"  text="/" onAction="#Dijeli"/>
+            <Button fx:id="timesid" GridPane.rowIndex="1" GridPane.columnIndex="2" maxWidth="Infinity" text="*" onAction="#Puta"/>
+            <Button fx:id="btn7" GridPane.rowIndex="2" maxWidth="Infinity" text="7" onAction="#Sedam"/>
+            <Button fx:id="btn8" GridPane.rowIndex="2" GridPane.columnIndex="1" maxWidth="Infinity" text="8"  onAction="#dungeOsam"/>
+            <Button fx:id="btn9" GridPane.rowIndex="2" GridPane.columnIndex="2" maxWidth="Infinity" text="9" onAction="#Devet"/>
+            <Button fx:id="btn4" GridPane.rowIndex="3" maxWidth="Infinity" text="4" onAction="#Cetiri"/>
+            <Button fx:id="btn5" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="Infinity" text="5" onAction="#Pet"/>
+            <Button fx:id="btn6" GridPane.rowIndex="3" GridPane.columnIndex="2" maxWidth="Infinity" text="6" onAction="#Sest"/>
+            <Button fx:id="btn1" GridPane.rowIndex="4"  maxWidth="Infinity" text="1" onAction="#Jedan"/>
+            <Button fx:id="btn2" GridPane.rowIndex="4" GridPane.columnIndex="1" maxWidth="Infinity" text="2" onAction="#Dva"/>
+            <Button fx:id="btn3" GridPane.rowIndex="4" GridPane.columnIndex="2" maxWidth="Infinity" text="3" onAction="#Tri"/>
+
+    <Button fx:id="minusbtn" GridPane.rowIndex="1" GridPane.columnIndex="3" maxWidth="Infinity" text="-" onAction="#Oduzmi"/>
+    <Button fx:id="plusbtn" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.rowSpan="2" maxHeight="Infinity" maxWidth="Infinity" text="+" onAction="#Plus"/>
+    <Button fx:id="equals" GridPane.rowIndex="4" GridPane.columnIndex="3" GridPane.rowSpan="2" maxHeight="Infinity" maxWidth="Infinity" text="=" onAction="#Jednako"/>
+    <Button fx:id="btn0" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2" maxWidth="Infinity" text="0" onAction="#Nula"/>
+    <Button fx:id="pointbtn" GridPane.rowIndex="5" GridPane.columnIndex="2" maxWidth="Infinity" text="." onAction="#DecTacka"/>
 </GridPane>
