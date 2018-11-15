@@ -45,8 +45,8 @@
             <Button fx:id="btn3" GridPane.rowIndex="4" GridPane.columnIndex="2" maxWidth="Infinity" text="3" onAction="#Tri"/>
 
     <Button fx:id="minusbtn" GridPane.rowIndex="1" GridPane.columnIndex="3" maxWidth="Infinity" text="-" onAction="#Oduzmi"/>
-    <Button fx:id="plusbtn" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.rowSpan="2" maxHeight="Infinity" maxWidth="Infinity" text="+" onAction="#Plus"/>
-    <Button fx:id="equals" GridPane.rowIndex="4" GridPane.columnIndex="3" GridPane.rowSpan="2" maxHeight="Infinity" maxWidth="Infinity" text="=" onAction="#Jednako"/>
+    <Button fx:id="plusBtn" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.rowSpan="2" maxHeight="Infinity" maxWidth="Infinity" text="+" onAction="#Plus"/>
+    <Button fx:id="equalsBtn" GridPane.rowIndex="4" GridPane.columnIndex="3" GridPane.rowSpan="2" maxHeight="Infinity" maxWidth="Infinity" text="=" onAction="#Jednako"/>
     <Button fx:id="btn0" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2" maxWidth="Infinity" text="0" onAction="#Nula"/>
-    <Button fx:id="pointbtn" GridPane.rowIndex="5" GridPane.columnIndex="2" maxWidth="Infinity" text="." onAction="#DecTacka"/>
+    <Button fx:id="dotBtn" GridPane.rowIndex="5" GridPane.columnIndex="2" maxWidth="Infinity" text="." onAction="#DecTacka"/>
 </GridPane>

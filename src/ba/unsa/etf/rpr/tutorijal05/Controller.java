@@ -132,7 +132,7 @@ public class Controller {
             if(operator.get().equals("-"))
                 rezultat= br1-br2;
             else if(operator.get().equals("+"))
-                rezultat= br1-br2;
+                rezultat= br1+br2;
             else if(operator.get().equals("*"))
                  rezultat=br1*br2;
             else if(operator.get().equals("/"))
@@ -147,7 +147,12 @@ public class Controller {
 
     public void Nula(ActionEvent actionEvent)
     {
+        if(displej.get().equals("0"))
         displej.set("0");
+        else
+        {
+            displej.set(displej.get()+"0");
+        }
     }
 
     public void DecTacka(ActionEvent actionEvent)
