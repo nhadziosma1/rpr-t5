@@ -106,4 +106,126 @@ class MainTest {
         robot.clickOn("#btn0");
         assertEquals("10", display.getText());
     }
+
+    @Test
+    public void tipkaNula (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn0");
+        robot.clickOn("#btn0");
+        robot.clickOn("#btn0");
+        robot.clickOn("#btn0");
+        assertEquals("0", display.getText());
+    }
+
+    @Test
+    public void decTack2 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#equalsBtn");
+
+        Double d = 88.88-88;
+        assertEquals(d.toString(), display.getText());
+    }
+
+    @Test
+    public void number456minus123 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn4");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn6");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn3");
+        robot.clickOn("#equalsBtn");
+        assertEquals("333.0", display.getText());
+    }
+
+    @Test
+    public void number25puta10 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#mulBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+        assertEquals("250.0", display.getText());
+    }
+
+    @Test
+    public void number25podjeljeno10 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#divBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+
+        Double d = 25./10;
+        assertEquals(d.toString(), display.getText());
+    }
+
+    @Test
+    public void number25podjeljeno30 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#divBtn");
+        robot.clickOn("#btn3");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+
+        Double d = 25./30;
+        assertEquals(d.toString(), display.getText());
+    }
+
+    @Test
+    public void number25podjeljeno0 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#divBtn");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+
+        assertEquals("error", display.getText());
+    }
+
+    @Test
+    public void number25mod10 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#modBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+
+        Double d = 25.%10;
+        assertEquals(d.toString(), display.getText());
+    }
+
+    @Test
+    public void number25mod5 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#modBtn");
+        robot.clickOn("#btn0");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+
+        Double d = 25.%5;
+        assertEquals(d.toString(), display.getText());
+    }
+
 }

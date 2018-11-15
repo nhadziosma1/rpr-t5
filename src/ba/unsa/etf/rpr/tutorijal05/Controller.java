@@ -116,7 +116,6 @@ public class Controller {
         broj1= new SimpleStringProperty(displej.get());
         operator = new SimpleStringProperty("+");
         displej.set("0");
-
     }
 
     public void Jednako(ActionEvent actionEvent)
@@ -136,7 +135,14 @@ public class Controller {
             else if(operator.get().equals("*"))
                  rezultat=br1*br2;
             else if(operator.get().equals("/"))
+            {
+                if(br2 == 0)
+                {
+                    displej.set("error");
+                    return;
+                }
                 rezultat=br1/br2;
+            }
             else if(operator.get().equals("%"))
                 rezultat= br1%br2;
 
